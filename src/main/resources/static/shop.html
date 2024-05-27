@@ -124,14 +124,16 @@
             padding: 27px 0;
         }
         .bunjang_logo {
-            position: absolute;
             display: flex;
             font-weight: bold;
             font-size: 21px;
             font-family: Verdana, fantasy;
-            margin: 10px 60px 30px 180px;
             text-decoration: none;
             color: #000000;
+            margin-left: 59%;
+            margin-top: 3%;
+            flex-wrap: nowrap;
+            align-items: center;
 
         }
         .banner_search {
@@ -144,7 +146,7 @@
         }
 
         .top_content {
-            margin-left: 70%;
+            margin-left: 71%;
         }
         .top_button {
             --bs-btn-border-color: #ffffff;
@@ -204,46 +206,52 @@
             justify-content: space-evenly;
         }
 
-        .dropdown:hover .dropdown-menu {
+        .dropdown:hover .dropdown-menu,
+        .dropdown_img:hover + .dropdown-menu,
+        .dropdown-menu:hover {
             display: block;
         }
+
         .dropdown-menu {
-            margin-top: 40px;
+            display: none; /* 기본적으로 드롭다운 메뉴를 숨깁니다 */
+            margin-top: 66px;
             margin-left: 1px;
+            --bs-dropdown-min-width: 13rem;
+            --bs-dropdown-border-radius: none;
         }
+
         .dropdown_img {
             position: static;
             margin-top: 10px;
             font-family: inherit;
-            cursor:pointer;
+            cursor: pointer;
         }
+
         .dropdown_img:hover {
             color: red;
-            display: block;
-
         }
+    #kakao-login-btn {
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        background-color: #FEE500;
+        color: #3c1e1e;
+        font-size: 16px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s, color 0.3s;
+    }
 
-        #kakao-login-btn {
-            width: 100%;
-            border: none;
-            border-radius: 5px;
-            background-color: #FEE500;
-            color: #3c1e1e;
-            font-size: 16px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        #kakao-login-btn img {
-            margin-right: 10px; /* 아이콘과 텍스트 사이의 간격 */
+    #kakao-login-btn img {
+        margin-right: 10px; /* 아이콘과 텍스트 사이의 간격 */
         }
 
         #kakao-login-btn:hover {
             background-color: #ffd500;
         }
+
     </style>
 </head>
 <body>
@@ -352,7 +360,7 @@
             </div>
             <div class="col-md-5">
                 <div class="d-flex">
-                    <input type="text" class="form-control me-2" placeholder="검색어 입력">
+                    <input type="text" class="form-control" placeholder="검색어 입력">
                     <button class="btn btn-primary banner_search">검색</button>
                 </div>
             </div>
@@ -360,22 +368,23 @@
                 <div class="top-icons">
                     <a href="#" class="top-icon">
                         <span class="material-symbols-outlined">currency_exchange</span>
-                        <span>판매하기</span>
+                        <span style="margin-left: 4px">판매하기</span>
                     </a><p style="color: #9c9a9a; font-size: 15px;">|</p>
                     <a href="#" class="top-icon">
                         <span class="material-symbols-outlined">storefront</span>
-                        <span>내상점</span>
+                        <span style="margin-left: 4px">내상점</span>
                     </a><p style="color: #9c9a9a; font-size: 15px;">|</p>
                     <a href="#" class="top-icon">
                         <span class="material-symbols-outlined">forum</span>
-                        <span>번개톡</span>
+                        <span style="margin-left: 4px">번개톡</span>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="btn-group my-3 dropdown" style="width: 50px; margin-right: 880px;">
+        <div class="btn-group dropdown" style="width: 50px; margin-right: 68%;">
             <div class="dropdown_img">
-                <span class="material-symbols-outlined" style="">menu</span></div>
+                <span class="material-symbols-outlined" style="">menu</span>
+            </div>
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">전체 카테고리</a></li>
                 <li><hr class="dropdown-divider"></li>
@@ -385,6 +394,7 @@
                 <li><a class="dropdown-item" href="#">식품</a></li>
             </ul>
         </div>
+
     </div>
 </div>
 <div>
@@ -488,7 +498,7 @@
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    // ㅎㅇ
+
 
 </div>
 </body>
